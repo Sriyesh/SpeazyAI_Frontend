@@ -33,14 +33,12 @@ interface HomePageProps {
 }
 
 export function HomePage({ onNavigate }: HomePageProps) {
-  const [showMelloMessage, setShowMelloMessage] =
-    useState(true);
+  const [showMelloMessage, setShowMelloMessage] = useState(true);
 
-  const TEXT_LIGHT = "#F2F6FF"; // Text color for primary text
-  const TEXT_MUTED = "rgba(242,246,255,0.78)"; // Muted text for secondary information
-  const CARD_TEXT = "#0F1F47"; // Text color for cards
+  const TEXT_LIGHT = "#F2F6FF"; // Light text color
+  const TEXT_MUTED = "#B0C4DE"; // Muted text color for better contrast
+  const CARD_TEXT = "#0F1F47"; // Dark text color for cards
 
-  // Updated background gradient
   const BLURRY_BLUE_BG: React.CSSProperties = {
     backgroundColor: "#123A8A",
     backgroundImage: `
@@ -138,10 +136,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={BLURRY_BLUE_BG}
-      />
+      <div className="absolute inset-0 -z-10" style={BLURRY_BLUE_BG} />
 
       <nav className="sticky top-0 z-50 backdrop-blur-sm/0 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,10 +145,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="w-10 h-10 linear-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
                 <Mic2 className="w-5 h-5 text-white" />
               </div>
-              <span
-                className="font-semibold text-lg"
-                style={{ color: TEXT_LIGHT }}
-              >
+              <span className="font-semibold text-lg" style={{ color: TEXT_LIGHT }}>
                 Speech Skills AI
               </span>
             </div>
@@ -216,29 +208,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-white/12 px-4 py-2 rounded-full border border-white/20">
                 <Sparkles className="w-4 h-4 text-[#CFE2FF]" />
-                <span
-                  className="text-sm"
-                  style={{ color: TEXT_LIGHT }}
-                >
+                <span className="text-sm" style={{ color: TEXT_LIGHT }}>
                   AI-Powered Speech Training
                 </span>
               </div>
 
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl leading-tight"
-                style={{ color: TEXT_LIGHT, textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-              >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight" style={{ color: TEXT_LIGHT }}>
                 Empowering Confident Communication with AI
               </h1>
 
-              <p
-                className="text-xl leading-relaxed"
-                style={{ color: TEXT_MUTED }}
-              >
-                Transform your speaking skills with our
-                AI-powered platform. Get instant feedback,
-                personalized coaching, and interactive lessons
-                designed by experts.
+              <p className="text-xl leading-relaxed" style={{ color: TEXT_MUTED }}>
+                Transform your speaking skills with our AI-powered platform. Get instant feedback, personalized coaching, and interactive lessons designed by experts.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -246,8 +226,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   onClick={() => onNavigate("signup")}
                   className="h-14 px-8 linear-gradient-primary text-white rounded-2xl shadow-xl hover:shadow-2xl transition hover:scale-105 text-lg"
                 >
-                  <UserPlus className="w-5 h-5 mr-2" /> Get
-                  Started for Free
+                  <UserPlus className="w-5 h-5 mr-2" /> Get Started for Free
                 </Button>
                 <Button
                   variant="outline"
@@ -259,12 +238,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex -space-x-2">
-                  {[
-                    "#3B82F6",
-                    "#00B9FC",
-                    "#FFD600",
-                    "#246BCF",
-                  ].map((c, i) => (
+                  {["#3B82F6", "#00B9FC", "#FFD600", "#246BCF"].map((c, i) => (
                     <div
                       key={i}
                       className="w-10 h-10 rounded-full border-2 border-white/70 shadow-md"
@@ -281,10 +255,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       />
                     ))}
                   </div>
-                  <p
-                    className="text-sm"
-                    style={{ color: TEXT_MUTED }}
-                  >
+                  <p className="text-sm" style={{ color: TEXT_MUTED }}>
                     Trusted by 50,000+ students worldwide
                   </p>
                 </div>
@@ -322,60 +293,29 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       <div className="text-center space-y-2">
                         <div className="inline-flex items-center gap-2 bg-[#3B82F6]/10 px-4 py-2 rounded-full">
                           <div className="w-2 h-2 bg-[#00B9FC] rounded-full animate-pulse" />
-                          <span
-                            className="text-sm"
-                            style={{ color: CARD_TEXT }}
-                          >
+                          <span className="text-sm" style={{ color: CARD_TEXT }}>
                             Recording...
                           </span>
                         </div>
-                        <p
-                          className="text-2xl"
-                          style={{ color: CARD_TEXT }}
-                        >
+                        <p className="text-2xl" style={{ color: CARD_TEXT }}>
                           "Practice makes perfect!"
                         </p>
-                        <p
-                          className="text-sm"
-                          style={{
-                            color: "rgba(15,31,71,0.65)",
-                          }}
-                        >
+                        <p className="text-sm" style={{ color: "rgba(15,31,71,0.65)" }}>
                           AI analyzing your speech in real-time
                         </p>
                       </div>
 
                       <div className="grid grid-cols-3 gap-3 pt-4">
                         {[
-                          {
-                            label: "Clarity",
-                            value: "95%",
-                            color: "#3B82F6",
-                          },
-                          {
-                            label: "Pace",
-                            value: "88%",
-                            color: "#00B9FC",
-                          },
-                          {
-                            label: "Tone",
-                            value: "92%",
-                            color: "#FFD600",
-                          },
+                          { label: "Clarity", value: "95%", color: "#3B82F6" },
+                          { label: "Pace", value: "88%", color: "#00B9FC" },
+                          { label: "Tone", value: "92%", color: "#FFD600" },
                         ].map((m, i) => (
                           <div key={i} className="text-center">
-                            <div
-                              className="text-2xl mb-1"
-                              style={{ color: m.color }}
-                            >
+                            <div className="text-2xl mb-1" style={{ color: m.color }}>
                               {m.value}
                             </div>
-                            <div
-                              className="text-xs"
-                              style={{
-                                color: "rgba(15,31,71,0.65)",
-                              }}
-                            >
+                            <div className="text-xs" style={{ color: "rgba(15,31,71,0.65)" }}>
                               {m.label}
                             </div>
                           </div>
@@ -384,43 +324,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     </div>
                   </CardContent>
                 </Card>
-
-                <div
-                  className="absolute top-10 left-10 bg-white neumorphic-card border-0 shadow-lg px-4 py-2 rounded-full"
-                  style={{
-                    animation:
-                      "bounce 3s cubic-bezier(0.4,0,0.6,1) infinite",
-                  }}
-                >
-                  <div className="flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-[#3B82F6]" />
-                    <span
-                      className="text-sm"
-                      style={{ color: CARD_TEXT }}
-                    >
-                      1000+ Lessons
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  className="absolute bottom-10 right-10 bg-white neumorphic-card border-0 shadow-lg px-4 py-2 rounded-full"
-                  style={{
-                    animation:
-                      "bounce 2.5s cubic-bezier(0.4,0,0.6,1) infinite",
-                    animationDelay: "0.5s",
-                  }}
-                >
-                  <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-[#FFD600] fill-[#FFD600]" />
-                    <span
-                      className="text-sm"
-                      style={{ color: CARD_TEXT }}
-                    >
-                      4.9 Rating
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -431,58 +334,25 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2
-              className="text-4xl md:text-5xl mb-4"
-              style={{ color: TEXT_LIGHT }}
-            >
+            <h2 className="text-4xl md:text-5xl mb-4" style={{ color: TEXT_LIGHT }}>
               Trusted Worldwide
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#3B82F6] to-[#00B9FC] mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Download,
-                value: "500K+",
-                label: "Downloads",
-                color: "#3B82F6",
-              },
-              {
-                icon: Users,
-                value: "50K+",
-                label: "Active Students",
-                color: "#00B9FC",
-              },
-              {
-                icon: Award,
-                value: "10K+",
-                label: "Lessons Learned",
-                color: "#FFD600",
-              },
-            ].map((s, idx) => (
+            {stats.map((s, idx) => (
               <Card
                 key={idx}
                 className="bg-white neumorphic-card border-0 hover:shadow-2xl transition hover:-translate-y-2"
               >
                 <CardContent className="p-8 text-center">
-                  <div
-                    className="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center shadow-lg"
-                    style={{
-                      background: `linear-gradient(135deg, ${s.color}, ${s.color}dd)`,
-                    }}
-                  >
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: `linear-gradient(135deg, ${s.color}, ${s.color}dd)` }}>
                     <s.icon className="w-8 h-8 text-white" />
                   </div>
-                  <p
-                    className="text-5xl mb-2"
-                    style={{ color: CARD_TEXT }}
-                  >
+                  <p className="text-5xl mb-2" style={{ color: CARD_TEXT }}>
                     {s.value}
                   </p>
-                  <p
-                    className="text-lg"
-                    style={{ color: "rgba(15,31,71,0.7)" }}
-                  >
+                  <p className="text-lg" style={{ color: "rgba(15,31,71,0.7)" }}>
                     {s.label}
                   </p>
                 </CardContent>
@@ -495,43 +365,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className="text-4xl md:text-5xl mb-4"
-              style={{ color: TEXT_LIGHT }}
-            >
+            <h2 className="text-4xl md:text-5xl mb-4" style={{ color: TEXT_LIGHT }}>
               Why Choose Us
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#3B82F6] to-[#00B9FC] mx-auto mb-6 rounded-full" />
-            <p
-              className="text-xl mx-auto"
-              style={{ color: TEXT_MUTED }}
-            >
+            <p className="text-xl mx-auto" style={{ color: TEXT_MUTED }}>
               Cutting-edge technology meets expert pedagogy
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((f, i) => (
-              <Card
-                key={i}
-                className="group bg-white neumorphic-card border-0 transition hover:-translate-y-2 hover:shadow-2xl"
-              >
+              <Card key={i} className="group bg-white neumorphic-card border-0 transition hover:-translate-y-2 hover:shadow-2xl">
                 <CardContent className="p-8">
-                  <div
-                    className={`w-16 h-16 mb-6 bg-gradient-to-br ${f.gradient} rounded-2xl flex items-center justify-center shadow-lg transition group-hover:scale-110 group-hover:rotate-3`}
-                  >
+                  <div className={`w-16 h-16 mb-6 bg-gradient-to-br ${f.gradient} rounded-2xl flex items-center justify-center shadow-lg transition group-hover:scale-110 group-hover:rotate-3`}>
                     <f.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3
-                    className="text-2xl mb-4"
-                    style={{ color: CARD_TEXT }}
-                  >
+                  <h3 className="text-2xl mb-4" style={{ color: CARD_TEXT }}>
                     {f.title}
                   </h3>
-                  <p
-                    className="leading-relaxed"
-                    style={{ color: "rgba(15,31,71,0.75)" }}
-                  >
+                  <p className="leading-relaxed" style={{ color: "rgba(15,31,71,0.75)" }}>
                     {f.description}
                   </p>
                 </CardContent>
@@ -544,17 +397,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className="text-4xl md:text-5xl mb-4"
-              style={{ color: TEXT_LIGHT }}
-            >
+            <h2 className="text-4xl md:text-5xl mb-4" style={{ color: TEXT_LIGHT }}>
               What People Say
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#3B82F6] to-[#00B9FC] mx-auto mb-6 rounded-full" />
-            <p
-              className="text-xl"
-              style={{ color: TEXT_MUTED }}
-            >
+            <p className="text-xl" style={{ color: TEXT_MUTED }}>
               Real stories from real users
             </p>
           </div>
@@ -569,23 +416,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   <Quote className="w-10 h-10 text-[#FFD600] mb-4 opacity-60" />
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(t.rating)].map((_, j) => (
-                      <Star
-                        key={j}
-                        className="w-5 h-5 text-[#FFD600] fill-[#FFD600]"
-                      />
+                      <Star key={j} className="w-5 h-5 text-[#FFD600] fill-[#FFD600]" />
                     ))}
                   </div>
-                  <p
-                    className="mb-6 leading-relaxed italic"
-                    style={{ color: "rgba(15,31,71,0.75)" }}
-                  >
+                  <p className="mb-6 leading-relaxed italic" style={{ color: "rgba(15,31,71,0.75)" }}>
                     "{t.text}"
                   </p>
                   <div className="flex items-center gap-4">
                     <Avatar className="w-12 h-12">
-                      <AvatarFallback
-                        className={`bg-gradient-to-br ${t.gradient} text-white`}
-                      >
+                      <AvatarFallback className={`bg-gradient-to-br ${t.gradient} text-white`}>
                         {t.avatar}
                       </AvatarFallback>
                     </Avatar>
@@ -593,10 +432,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                       <p style={{ color: CARD_TEXT }}>
                         {t.name}
                       </p>
-                      <p
-                        className="text-sm"
-                        style={{ color: "rgba(15,31,71,0.65)" }}
-                      >
+                      <p className="text-sm" style={{ color: "rgba(15,31,71,0.65)" }}>
                         {t.role}
                       </p>
                     </div>
@@ -620,8 +456,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   Start Your Journey Today
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Join thousands of students improving their
-                  speaking skills with AI-powered coaching
+                  Join thousands of students improving their speaking skills with AI-powered coaching
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button
@@ -657,36 +492,24 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </span>
               </div>
               <p className="text-white/70 leading-relaxed mb-4">
-                Empowering voices worldwide with AI technology
-                and expert speech training.
+                Empowering voices worldwide with AI technology and expert speech training.
               </p>
               <div className="flex items-center gap-3">
-                {[Twitter, Linkedin, Github, Facebook].map(
-                  (Icon, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
-                    >
-                      <Icon className="w-4 h-4" />
-                    </a>
-                  ),
-                )}
+                {[Twitter, Linkedin, Github, Facebook].map((Icon, i) => (
+                  <a key={i} href="#" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors">
+                    <Icon className="w-4 h-4" />
+                  </a>
+                ))}
               </div>
             </div>
 
             <div>
-              <h4 className="text-white mb-4 text-lg">
-                Quick Links
-              </h4>
+              <h4 className="text-white mb-4 text-lg">Quick Links</h4>
               <div className="space-y-3">
                 <button className="block text-white/70 hover:text-white transition-colors">
                   Courses
                 </button>
-                <button
-                  onClick={() => onNavigate("about")}
-                  className="block text-white/70 hover:text-white transition-colors"
-                >
+                <button onClick={() => onNavigate("about")} className="block text-white/70 hover:text-white transition-colors">
                   About
                 </button>
                 <button className="block text-white/70 hover:text-white transition-colors">
@@ -699,9 +522,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div>
-              <h4 className="text-white mb-4 text-lg">
-                Contact Info
-              </h4>
+              <h4 className="text-white mb-4 text-lg">Contact Info</h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-white/70">
                   <Mail className="w-4 h-4" />
@@ -719,21 +540,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div>
-              <h4 className="text-white mb-4 text-lg">
-                Get Started
-              </h4>
+              <h4 className="text-white mb-4 text-lg">Get Started</h4>
               <div className="space-y-3">
-                <Button
-                  onClick={() => onNavigate("signup")}
-                  className="w-full bg-white text-[#3B82F6] hover:bg-white/90 rounded-xl"
-                >
+                <Button onClick={() => onNavigate("signup")} className="w-full bg-white text-[#3B82F6] hover:bg-white/90 rounded-xl">
                   Sign Up
                 </Button>
-                <Button
-                  onClick={() => onNavigate("login")}
-                  variant="outline"
-                  className="w-full border-2 border-white/30 text-white hover:bg-white/10 rounded-xl"
-                >
+                <Button onClick={() => onNavigate("login")} variant="outline" className="w-full border-2 border-white/30 text-white hover:bg-white/10 rounded-xl">
                   Log In
                 </Button>
               </div>
@@ -742,8 +554,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
           <div className="pt-8 border-t border-white/10 text-center">
             <p className="text-white/60 text-sm">
-              © 2025 Speech Skills AI. All rights reserved.
-              Professional Speech Training Platform.
+              © 2025 Speech Skills AI. All rights reserved. Professional Speech Training Platform.
             </p>
           </div>
         </div>
@@ -759,4 +570,3 @@ export function HomePage({ onNavigate }: HomePageProps) {
     </div>
   );
 }
-
