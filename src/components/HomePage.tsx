@@ -36,11 +36,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
   const [showMelloMessage, setShowMelloMessage] =
     useState(true);
 
-  const TEXT_LIGHT = "#F2F6FF";
-  const TEXT_MUTED = "rgba(242,246,255,0.78)";
-  const CARD_TEXT = "#0F1F47";
+  const TEXT_LIGHT = "#F2F6FF"; // Text color for primary text
+  const TEXT_MUTED = "rgba(242,246,255,0.78)"; // Muted text for secondary information
+  const CARD_TEXT = "#0F1F47"; // Text color for cards
 
-  // UPDATED: removed the first white glow gradient. Blues only.
+  // Updated background gradient
   const BLURRY_BLUE_BG: React.CSSProperties = {
     backgroundColor: "#123A8A",
     backgroundImage: `
@@ -154,7 +154,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 className="font-semibold text-lg"
                 style={{ color: TEXT_LIGHT }}
               >
-                Speech Skills AIsss
+                Speech Skills AI
               </span>
             </div>
 
@@ -226,7 +226,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
               <h1
                 className="text-5xl md:text-6xl lg:text-7xl leading-tight"
-                style={{ color: TEXT_LIGHT }}
+                style={{ color: TEXT_LIGHT, textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
               >
                 Empowering Confident Communication with AI
               </h1>
@@ -759,3 +759,4 @@ export function HomePage({ onNavigate }: HomePageProps) {
     </div>
   );
 }
+
