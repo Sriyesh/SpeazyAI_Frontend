@@ -154,7 +154,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 className="font-semibold text-lg"
                 style={{ color: TEXT_LIGHT }}
               >
-                Speech Skills AI
+                Speech Skills AIsss
               </span>
             </div>
 
