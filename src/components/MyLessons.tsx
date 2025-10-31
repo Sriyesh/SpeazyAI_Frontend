@@ -72,7 +72,7 @@ The return journey was just as exciting. Luna brought back valuable information 
     duration: '10 min',
     illustration: '🌊',
     color: 'from-cyan-500 to-blue-600',
-    completed: false,
+    completed: false, 
     content: `Marine biologist Dr. Maya had always been fascinated by the mysteries hidden beneath the ocean waves. Armed with her advanced diving equipment and underwater camera, she embarked on an expedition to explore the deepest parts of the Pacific Ocean.
 
 As Maya descended into the abyss, she discovered a vibrant coral reef teeming with colorful fish, sea turtles, and exotic marine life. The reef was like an underwater rainbow, with corals of every imaginable color creating a living work of art.
